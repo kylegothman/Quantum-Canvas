@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --qc-bg: #0a0a0f;
+  --qc-surface: #141420;
+  --qc-elevated: #1e1e30;
+  --qc-border: #2a2a40;
+  --qc-text-primary: #e8e8f0;
+  --qc-text-secondary: #8888a0;
+  --qc-accent-orange: #ff6b35;
+  --qc-accent-pink: #ff2e63;
+  --qc-accent-cyan: #08d9d6;
+  --qc-accent-purple: #6b5ce7;
+  --qc-accent-green: #38b764;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--qc-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--qc-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--qc-text-secondary);
+}
+
+/* Gate drag ghost */
+.gate-dragging {
+  opacity: 0.8;
+  cursor: grabbing;
+}
+
+/* Smooth transitions for panels */
+.panel-transition {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glow effect for active elements */
+.glow-orange {
+  box-shadow: 0 0 12px rgba(255, 107, 53, 0.4);
+}
+
+.glow-pink {
+  box-shadow: 0 0 12px rgba(255, 46, 99, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 12px rgba(8, 217, 214, 0.4);
+}
